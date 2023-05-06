@@ -1,5 +1,5 @@
 baseURL = "https://dribo.github.io/DTU-02467_ProjectB/"
-title = "Project Title"
+title = "Slightly Different Project Title"
 description = "This is a project description"
 relativeURLs = true
 theme = "theme" 
