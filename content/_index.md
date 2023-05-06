@@ -13,8 +13,9 @@ Wikipedia is an enormous database of knowledge about everything and anything and
 well-documented on Wikipedia. The time period of the Cold War, and the corresponding Wikipedia article, is an interesting
 piece both of and on history about a highly factionalized world divided in east and west and communism and capitalism. 
 The most well-documented branch of Wikipedia is the English-language Wikipedia, which to us raises the question of bias
-in the way this conflict and its referenced works are described. Is there for instance a notable difference in the way
-sentiment on articles depending on ...
+in the way this conflict and its referenced works are described. Is there for instance a notable difference in the 
+sentiment of articles about the Eastern bloc compared to articles about the Western bloc? Or are there differences in
+the language used that cannot be explained by the difference in topic? These are the kinds of 
 
 
 ## Something about graphs
