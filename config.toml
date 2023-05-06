@@ -2,7 +2,7 @@ baseURL = "https://dribo.github.io/DTU-02467_ProjectB/"
 title = "Slightly Different Project Title"
 description = "This is a project description"
 relativeURLs = true
-theme = "theme" 
+theme = "theme"
 [params]
     authors = ["Magnus A. Nielsen", "Philip J. F. Helsted"]
     notebook = "/explainer-notebook.html"
