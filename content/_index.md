@@ -13,10 +13,9 @@ well-documented on Wikipedia. The time period of the Cold War, and the correspon
 interesting piece both of and on history about a highly factionalized 
 world divided in east and west and communism and capitalism. 
 The most well-documented Wikipedia is the English Wikipedia, which raises the question of bias
-in the way this conflict and its referenced works are described. Is there for instance a notable difference in the 
-sentiment of articles about the Eastern bloc compared to articles about the Western bloc? Or are there differences in
-the language used that cannot be explained by the difference in topic? These are the kinds of questions we are trying
-to answer with this webpage.
+in the way this conflict and its referenced works are described. Is there, for instance, differences in
+the language used that cannot be explained by the difference in topic? This is one of the question we aim to answer
+with this web-page.
 
 ## The Data
 The data that have been used for this project, was obtained by web-scraping some articles on Wikipedia. The first 
