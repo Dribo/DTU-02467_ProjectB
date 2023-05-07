@@ -6,10 +6,10 @@ theme = "theme"
 [params]
     authors = ["Magnus A. Nielsen", "Philip J. F. Helsted"]
     notebook = "/explainer-notebook.html"
-    data = "https://drive.google.com"
+    data = "data/wiki_english_with_tokens.csv"
     github = "https://github.com/dribo/DTU-02467_ProjectB"
     [[params.nav]]
-        label = "Network"
+        label = "Network Analysis"
         link = "/network-analysis"
     [[params.nav]]
         label = "Text Analysis"
