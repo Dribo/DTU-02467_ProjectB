@@ -31,18 +31,41 @@ articles.
 
 This resulted in a data-collection of 859 rows, where each row represents a reference from the Cold War article. In
 total the amount of data summed to be approximately 40 MB of text data. Each row are described by 7 variables: 
-URL, TITLE, LIST OF REFERENCES, LIST OF PARAGRAPH TEXTS, CATEGORIES, TYPE, TOKENS and UNIQUE TOKENS. Of these, the most
+
+    URL, TITLE, LIST OF REFERENCES, LIST OF PARAGRAPH TEXTS, CATEGORIES, TYPE, TOKENS and UNIQUE TOKENS
+
+Of these, the most
 important ones are the list of references and the list of paragraphs. The list of references is the variable containing
 the articles referenced, and is the one being used to build the network. The list of paragraphs is the first couple of
 paragraphs from the article, and are used to build both the tokens and the unique tokens. These are also added as an 
 attribute in the network, and used to explore the language of the articles.
 
-
-### Sample rows from the data-frame? 
-
+#### Sample rows from the data-frame?
 
 ## The Network
 As mentioned, the network was constructed from the data set by using the list of references that was scraped for each 
 of the articles. This was done by creating a node for each article, and creating an edge for each reference to the 
-referenced article. 
+referenced article. The resulting full network had in total `857` nodes and `16216` edges. To simplify things a bit, we
+decided to make the Network undirected as that allowed us to better detect and understand the communities found in the 
+network. 
+
+# INSERT IMAGE OF THE FULL NETWORK
+
+### Subgraphs
+To facilitate a deeper understanding of the network, we decided to create some subgraphs of the network. We had built
+a heuristic for collecting the type of article, divided in person, event and none, and used this to assign each of the 
+nodes in the network a type. We could then use this to filter away all nodes of different type, such that the nodes left
+were the ones of the same type. This enabled us to look exclusively at both persons and events related to the Cold War,
+in effect allowing us to zoom in on the parts that were the most relevant to us.
+
+# INSERT IMAGE OF SUBGRAPHS PERSON AND EVENT
+
+#### Community detection
+A way in which we wanted to explore the network and the underlying data, was to detect communities within the network.
+Communities would tell us something about how the network was connected, and we hoped that it would show us a clear 
+divide in, for instance, east and west, capitalism and communism and so on. What we found was that in the Person
+subgraph, some clear communities appeared. We found communities of for instance U.S. presidents, Soviet presidents, 
+East-Asian Leaders, all grouped quite neatly in communities. 
+
+# INSERT IMAGE OF PERSON COMMUNITIES GRAPH
 
