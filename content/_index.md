@@ -39,8 +39,6 @@ the articles referenced, and is the one being used to build the network. The lis
 paragraphs from the article, and are used to build both the tokens and the unique tokens. These are also added as an 
 attribute in the network, and used to explore the language of the articles.
 
-#### Sample rows from the data-frame?
-
 ## *The Network*
 As mentioned, the network was constructed from the data set by using the list of references that was scraped for each 
 of the articles. This was done by creating a node for each article, and creating an edge for each reference to the 
