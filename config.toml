@@ -9,8 +9,8 @@ theme = "theme"
     data = "https://drive.google.com"
     github = "https://github.com/dribo/DTU-02467_ProjectB"
     [[params.nav]]
-        label = "Data"
-        link = "/data-description"
+        label = "Graph Description"
+        link = "/graph-description"
     [[params.nav]]
         label = "Network"
         link = "/network-analysis"
