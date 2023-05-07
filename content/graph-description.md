@@ -1,12 +1,26 @@
 ---
-title: Data description
+title: Graph Description
 prev: "/"
 next: network-analysis
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla tellus, tempus sed lobortis quis, venenatis ac ante. Maecenas accumsan augue ultricies metus hendrerit, in ultrices urna fringilla. Suspendisse lobortis egestas magna, sit amet fermentum ligula tincidunt vitae. Suspendisse cursus non dui a vulputate. Cras vestibulum vulputate enim eu placerat. Ut scelerisque semper justo sit amet auctor. Aliquam sit amet iaculis tortor.
 
-> Nulla in justo hendrerit, tincidunt mauris et, porta est. Donec in leo vitae est ultrices dapibus id nec tortor. Maecenas ut ipsum eu nisl cursus facilisis scelerisque eu ex. Aliquam euismod elementum libero, at vehicula ipsum.
+To answer some of the research questions of this project, a graph is a suitable representation of the data. It allows us to describe each wikipedia page as a node, and a reference as a link to another node. 
+
+## Attributes
+The data we have collected for each page is added as attributes to the nodes in the graph, so we can easily analyse data on the graph after applying methods that filter and group nodes. The attributes we add to each node are shown below
+
+| Attribute            | Data format                        | Source                                                                           |
+|----------------------|------------------------------------|----------------------------------------------------------------------------------|
+| TYPE                 | Either 'person', 'event' or 'none' |  We use a list of selected keywords for each type and scan categories for these  |
+| LIST_PARAGRAPH_TEXTS |           List of strings          |                            From the data we collected                            |
+| FLAT_TEXT            |               String               |   We flatten the string array to allow easier use for tokenizers and wordcloud   |
+| CATEGORIES           | List of strings                    | We take the wikipedia categories section which we scraped during data collection |
+| TITLE                | String                             | The title of the corresponding wikipedia page                                    |
+
+> Figure showing each attributes and how we obtain the value
+
+
 
 Nam commodo lorem quis tortor euismod, ut ultrices orci aliquet. Sed eget dui nec sem ullamcorper convallis id nec ante. Aliquam ultricies a massa quis semper. Donec suscipit augue ut sagittis hendrerit. Aliquam erat volutpat. Proin aliquet maximus nibh, id aliquet justo maximus at. Sed accumsan ante id aliquam pellentesque. 
 
