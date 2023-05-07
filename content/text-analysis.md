@@ -83,4 +83,17 @@ common in a given document.
 
 ![](/images/wordclouds.png)
 
-From these word clouds we can see that  
+These word clouds are from made from the texts found in 9 of the communities in event and degree filtered subgraph. 
+Above each word cloud is the 3 highest degree articles listed from each of the communities. What we see in these word
+clouds is that there are some clear differences in the words that occur most frequently, but also that some words are
+frequent in all 9 communities. This allows us to get insights into what the theme of the community is. For instance, the
+first community (top left) contains words `Soviet`, `German`, `Germany`, `Russian` all 4 of which are very prominent, 
+and the top article is the one about the Eastern Front during World War 2. From this we can infer that this community
+contains articles about Germany, The Soviet Union and the Eastern Bloc in general. We can furthermore see that it is 
+quite different from the word cloud from community 2 (top middle), which highlights words such as `Isreal`, `Isreali` 
+and `British`, and seems to be more about the British Empire, Israel and events that occurred in relation to these
+countries.
+
+Throughout, we see that all the word clouds are quite different and that each of them include unique words which belong
+only to that community. Another observation to be made, is that the word `Soviet` is prominent in almost all 
+word clouds, indicating the huge relevance the Soviet Union had on the entire time period.
