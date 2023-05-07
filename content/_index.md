@@ -1,10 +1,9 @@
 ---
-title: Motivation and Introduction
+title: Wikipedia article interlinkage
 layout: single 
 next: Data description
 ---
 
-# Wikipedia article interlinkage
 ##### How are the pages referenced in the Cold War article interlinked with each other?
 *by Magnus A. Nielsen (s204072) & Philip J. F. Helsted (s204147)*
 
@@ -32,7 +31,8 @@ articles.
 This resulted in a data-collection of 859 rows, where each row represents a reference from the Cold War article. In
 total the amount of data summed to be approximately 40 MB of text data. Each row are described by 7 variables: 
 
-    URL, TITLE, LIST OF REFERENCES, LIST OF PARAGRAPH TEXTS, CATEGORIES, TYPE, TOKENS and UNIQUE TOKENS
+    URL, TITLE, LIST OF REFERENCES, LIST OF PARAGRAPH TEXTS, 
+    CATEGORIES, TYPE, TOKENS, UNIQUE TOKENS
 
 Of these, the most
 important ones are the list of references and the list of paragraphs. The list of references is the variable containing
