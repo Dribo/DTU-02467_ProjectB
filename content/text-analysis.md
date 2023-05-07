@@ -81,6 +81,6 @@ Another way to visualise the differences in the words used in each community, is
 for generating pleasing visuals of the words in a text, and gives an intuitive overview of what words are the most 
 common in a given document. 
 
-![](img src="/images/wordclouds.png"/)
+![](/images/wordclouds.png/)
 
 From these word clouds we can see that  
