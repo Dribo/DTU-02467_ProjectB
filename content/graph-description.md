@@ -10,15 +10,13 @@ To answer some of the research questions of this project, a graph is a suitable 
 
 The data we have collected for each page is added as attributes to the nodes in the graph, so we can easily analyse data on the graph after applying methods that filter and group nodes. The attributes we add to each node are shown below
 
-<div align="center">
 | Attribute            | Data format                        | Source                                                                           |
 |----------------------|------------------------------------|----------------------------------------------------------------------------------|
-| TYPE                 | Either 'person', 'event' or 'none' |  We use a list of selected keywords for each type and scan categories for these  |
-| LIST_PARAGRAPH_TEXTS |           List of strings          |                            From the data we collected                            |
-| FLAT_TEXT            |               String               |   We flatten the string array to allow easier use for tokenizers and wordcloud   |
+| TYPE                 | Either 'person', 'event' or 'none' | We use a list of selected keywords for each type and scan categories for these   |
+| LIST_PARAGRAPH_TEXTS | List of strings                    | From the data we collected                                                       |
+| FLAT_TEXT            | String                             | We flatten the string array to allow easier use for tokenizers and wordcloud     |
 | CATEGORIES           | List of strings                    | We take the wikipedia categories section which we scraped during data collection |
-| TITLE                | String                             | The title of the corresponding wikipedia page                                    |
-</div>
+| TITLE                | String                             | The title of the corresponding wikipedia page   <br/>                            |
 > Figure showing each attributes and how we obtain the value
 
 ## Directed vs Undirected
