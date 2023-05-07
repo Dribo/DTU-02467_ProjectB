@@ -6,7 +6,7 @@ next: text-analysis
 
 For the research questions of this project, a graph is a suitable representation of the data. It allows us to describe each wikipedia page as a node, and a reference as a link to another node. 
 
-## Attributes
+## *Attributes*
 
 The data we have collected for each page is added as attributes to the nodes in the graph, so we can easily analyse data on the graph after applying methods that filter and group nodes. The attributes we add to each node are shown below
 
@@ -19,11 +19,11 @@ The data we have collected for each page is added as attributes to the nodes in 
 | TITLE                | String                             | The title of the corresponding wikipedia page   <br/>                            |
 > Figure showing each attributes and how we obtain the value
 
-## Directed vs Undirected
+## *Directed vs Undirected*
 
 The data from wikipedia contains links from one page to another. This inherently makes a directed graph a viable option. In this case we decide to go forward with a simplified graph which is undirected. This is because the methods we intend to use, for example the community algorithm, does not work on directed graphs. 
 
-## Subgraphs created
+## *Subgraphs created*
 
 Using the attributes in our nodes we experimented with subsets. We filtered based on type to get insights on this specific group. Another filter that proved useful was discarding nodes based on number of connections. Removing nodes with few edges and very high amounts of edges made a less interconnected graph which was more suitable for finding communities. We found subgraphs that were more readable in a visualization than the full graph. A few examples of graphs we found are shown below, we included communities for clarity, but we will go more into detail on these later
 
@@ -39,9 +39,9 @@ Using the attributes in our nodes we experimented with subsets. We filtered base
 
 > The final step of adding a filter on degree gives a smaller, yet more meaningfully grouped graph. We now see communities based on Japan and east europe also, while larger pages such as world war II are omitted. This likely makes for a more insightful analysis, that sheds light on a more historically accurate categorization of events.
 
-# Analysis
+# Graph Analysis
 
-## Assortativity
+## *Assortativity*
 
 Assortativity is a metric that quantifies how much node has in common with neighbors. We compute this metric for degree on both the full graph and the subgraph. For the full graph we also compute assortativity with respect to the type attribute, to see whether wikipedia articles about events tend to refer to other events, and the same for type.
 
@@ -49,7 +49,7 @@ For degree, the full graph gets a value of -0.13 and for the subgraph 0.01. For 
 
 In general, the wikipedia pages don't tend to have clear groups in terms of person or event. Therefore we will proceed using a filter on such type, since this is unlikely to separate naturally in the following community analysis.
 
-## Distribution of degrees
+## *Distribution of degrees*
 
 The data from wikipedia contains pages with a very large amount of references, but also pages with few or none. To better understand how this might impact the graph, we plot the distribution of node degrees.
 
@@ -65,7 +65,7 @@ Explanation: Looking at the degree distributions of the full graph, we see a few
 
 Explanation: In the subgraph that we intend to use for community text analysis, we see a much more even distribution, with a mean degree of 9.7.
 
-## Modularity and communities
+## *Modularity and communities*
 
 The subgraph has a much lower mean degree, which could provide higher modularity and therefore communities, which are more separate, which is a good thing if we want to look at them separately for further analysis. The purpose of this section is to validate or invalidate this claim.
 

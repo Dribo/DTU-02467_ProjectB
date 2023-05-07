@@ -1,7 +1,7 @@
 ---
 title: Wikipedia article interlinkage
 layout: single 
-next: Data description
+next: network-analysis
 ---
 
 ##### How are the pages referenced in the Cold War article interlinked with each other?
@@ -42,7 +42,7 @@ attribute in the network, and used to explore the language of the articles.
 
 #### Sample rows from the data-frame?
 
-## The Network
+## *The Network*
 As mentioned, the network was constructed from the data set by using the list of references that was scraped for each 
 of the articles. This was done by creating a node for each article, and creating an edge for each reference to the 
 referenced article. The resulting full network had in total `857` nodes and `16216` edges. To simplify things a bit, we
@@ -51,7 +51,7 @@ network.
 
 ![](/images/basic-network.png)
 
-### Subgraphs
+## *Subgraphs*
 To facilitate a deeper understanding of the network, we decided to create some subgraphs of the network. We had built
 a heuristic for collecting the type of article, divided in person, event and none, and used this to assign each of the 
 nodes in the network a type. We could then use this to filter away all nodes of different type, such that the nodes left
@@ -66,7 +66,7 @@ in effect allowing us to zoom in on the parts that were the most relevant to us.
 
 > Subgraph with type 'event'
 
-#### Community detection
+## *Community detection*
 A way in which we wanted to explore the network and the underlying data, was to detect communities within the network.
 Communities would tell us something about how the network was connected, and we hoped that it would show us a clear 
 divide in, for instance, east and west, capitalism and communism and so on. What we found was that in the Person
