@@ -25,7 +25,7 @@ The data from wikipedia contains links from one page to another. This inherently
 
 ## *Subgraphs created*
 
-Using the attributes in our nodes we experimented with subsets. We filtered based on type to get insights on this specific group. Another filter that proved useful was discarding nodes based on number of connections. Removing nodes with few edges and very high amounts of edges made a less interconnected graph which was more suitable for finding communities. We found subgraphs that were more readable in a visualization than the full graph. A few examples of graphs we found are shown below, we included communities for clarity, but we will go more into detail on these later
+Using the attributes in our nodes we experimented with subsets. We filtered based on type to get insights on a specific group. Another filter that proved useful was discarding nodes based on number of connections. Removing nodes with few edges and very high amounts of edges made a less interconnected graph which was more suitable for finding communities. We found subgraphs that were more readable in a visualization than the full graph. A few examples of graphs we found are shown below, we included communities for clarity, but we will go more into detail on these later.
 
 ![](/images/full-graph.png)
 
@@ -67,10 +67,10 @@ Explanation: In the subgraph that we intend to use for community text analysis, 
 
 ## *Modularity and communities*
 
-The subgraph has a much lower mean degree, which could provide higher modularity and therefore communities, which are more separate, which is a good thing if we want to look at them separately for further analysis. The purpose of this section is to validate or invalidate this claim.
+The subgraph has a much lower mean degree, which could provide higher modularity and therefore communities, which are more separate. This could be a good thing in our case, since we want to do a comparative text analysis. A use case of this section on modularity and communities is to validate or challenge this idea.
 
 To measure how well the communities are divised, we compute modularity for the three aforementioned graphs. In technical terms, modularity quantifies how interlinked the communities are compared to a graph where edges are randomized. The value is between -0.5, representing complete non-modular clustering, and 1, meaning fully modular partitions within the graph (no edges across communities).
 
 The community detecting algorithm we use is Louvain, which optimizes for modularity. This algorithm first finds clusters locally, then iteratively combining clusters until the next step leads to a decrease in modularity. Trying all possible combinations would get the best result in theory, but this is computationally impractical. Hence, the aforementioned heuristic is used.
 
-For modularity we initially find a value of the entire graph at 0.36. Filtering for event only gives 0.46 which is an improvement. Finally, we find 0.60 after thresholding node degrees. Therefore, the subgraph with event- and degree filtering is the one we proceed with for text analysis.
+For modularity we initially find a value of the entire graph at 0.36. Filtering for event only gives 0.46 which is an improvement. Finally, we find 0.60 after thresholding node degrees. Because of the high modularity, the subgraph with event- and degree filtering is the one we proceed with for text analysis.

@@ -4,7 +4,6 @@ prev: network-analysis
 next: conclusion
 ---
 
-# Text Analysis
 The text we have analysed is from the introductory paragraphs of each of the articles. We picked this text because we
 wanted to capture the essence of the article without having to analyse all the available text. Some of these texts are
 longer than others, but in general they all capture the essence of the article. 
