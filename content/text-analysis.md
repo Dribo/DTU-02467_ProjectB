@@ -36,5 +36,17 @@ The method we used for understanding the text was TF-IDF vectorisation. TF-IDF i
 > The final TF-IDF value is then arrived at by multiplying the TF value with the IDF value
 
 This final TF-IDF value is then a numerical value that represents how important a term is across the entire corpus. 
-This means that words that occur frequently in just a few documents will have a higher TF-IDF value, and as such count 
-as being more significant. 
+This means that words that occur frequently in just a few documents will have a higher TF-IDF value and therefore count
+as being more significant than words that occur less frequently. On the other hand, words that occur in only a few 
+documents, but occur very frequently in these documents, will also be seen as significant to that document. 
+
+Doing this we can get an understanding of which words are most defining for the documents, and also for the individual
+communities that we have found in the network.
+
+## Top terms in Communities
+Within the communities in the network we have used TF-IDF to extract the top terms of each of these communities. For 
+instance community 0, which is a community where the 3 most connected nodes are the articles about U.S. presidents
+`Richard Nixon`, `Dwight Eisenhower` and `Harry Truman`, have the top 10 terms
+['kennan', 'macarthur', 'eisenhower', 'gaulle', 'reagan', 'bush', 'reza', 'hoover', 'wilson', 'carter']
+
+> Insert image of top terms from some communities

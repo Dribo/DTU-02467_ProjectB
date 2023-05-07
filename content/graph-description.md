@@ -1,6 +1,6 @@
 ---
 title: Graph Description and Analysis
-prev: "/"
+prev: Wikipedia article interlinkage
 next: network-analysis
 ---
 
