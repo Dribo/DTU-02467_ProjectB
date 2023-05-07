@@ -1,6 +1,6 @@
 ---
 title: Motivation
-prev: "/"
+prev: 
 next: Data description
 ---
 
