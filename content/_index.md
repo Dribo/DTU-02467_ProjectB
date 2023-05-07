@@ -49,7 +49,7 @@ referenced article. The resulting full network had in total `857` nodes and `162
 decided to make the Network undirected as that allowed us to better detect and understand the communities found in the 
 network. 
 
-# INSERT IMAGE OF THE FULL NETWORK
+![](/images/basic-network.png)
 
 ### Subgraphs
 To facilitate a deeper understanding of the network, we decided to create some subgraphs of the network. We had built
@@ -58,7 +58,13 @@ nodes in the network a type. We could then use this to filter away all nodes of 
 were the ones of the same type. This enabled us to look exclusively at both persons and events related to the Cold War,
 in effect allowing us to zoom in on the parts that were the most relevant to us.
 
-# INSERT IMAGE OF SUBGRAPHS PERSON AND EVENT
+![](/images/basic-network-person.png)
+
+> Subgraph with type 'person'
+
+![](/images/basic-network-event.png)
+
+> Subgraph with type 'event'
 
 #### Community detection
 A way in which we wanted to explore the network and the underlying data, was to detect communities within the network.
@@ -67,5 +73,5 @@ divide in, for instance, east and west, capitalism and communism and so on. What
 subgraph, some clear communities appeared. We found communities of for instance U.S. presidents, Soviet presidents, 
 East-Asian Leaders, all grouped quite neatly in communities. 
 
-# INSERT IMAGE OF PERSON COMMUNITIES GRAPH
+![](/images/basic-network-person-communities.png)
 
