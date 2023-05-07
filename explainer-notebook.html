@@ -14590,6 +14590,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="LINK-TO-WEBPAGE">LINK TO WEBPAGE<a class="anchor-link" href="#LINK-TO-WEBPAGE">&#182;</a></h1><p><a href="https://dribo.github.io/DTU-02467_ProjectB/">https://dribo.github.io/DTU-02467_ProjectB/</a></p>
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><p>We get our dataset by scraping the cold war on Wikipedia. Then all references are also scraped. Each row is a wikipedia page with data: Title, Text, References, Categories</p>
 <p>We chose this particular dataset because the Cold War is an interesting subject, and we suspect that the page of choice being english, might cause bias, since the war is very polarizing depending on country and language.</p>
 <p>Our goal was to shed light on how wikipedia might contain bias, and what it might look like.</p>
@@ -14601,6 +14602,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <p>Afterwards, we examined assortativity on the full graph and our metric. This value was 0.05. Since we are sure our classification was not that bad, we now know that people and events will not be useful for community detection, and hence we worked with a subgraph for solely 'event' from then on.</p>
 <p>We spent some time experimenting with subgraphs, because it was difficult to get a good community segmentation. We finally reached a good modularity by removing high-degree nodes. We used distributions of the data, for example node degree distributions, to aid in our choice of thresholds for the subgraph filtering.</p>
 <p>For text analysis we used the communities for TF-IDF analysis. We attempted to answer our research question about finding bias in Wikipedia by looking at what words and distinctions came to surface, and whether these were surprising or not.</p>
+<p>We decided to use the sklearn implementation of the TF-IDF vectorisation. This was done mainly to avoid having to write a less efficient code than what was already available. A downside to this was that all pre-processing was done behind the scenes and as such we relenquished some control over the exact way our text data was pre-processed. We did take a look at the result of the pre-processing and found it to be in exactly the same vein that we ourselves would have written, and therfore we decided to move forward with this approach. To sum up, the pre-processing of the text was done by sklearn using their tokenizer, where all punctuation for instance counts as token seperators, compared to only using spaces or having some abbreviation count as one token, i.e U.S. We did however decided that this was a worthwhile trade-off compared to having to write the code ourselves which in any case would be less efficient.</p>
 <h1 id="Discussion">Discussion<a class="anchor-link" href="#Discussion">&#182;</a></h1><p>In general the project went well. We found that Wikipedia has a large amount of data available, and that articles are more interlinked than perhaps we intially expected. This made it necessary to be a bit creative in what heuristics we employed in order to get a subgraph that was both interesting to analyse and which also could be used to answer the questions we wanted.
 We also found that using a ready-made library in SKLearn for the TF-IDF gave us more time to actually analyse the data rather than spending the time writing code that anyways would be less efficient. It did however mean that we had less of a say in how the pre-processing was done, which obviously gave us less independence in the results. On that note, however, we found that the pre-processing actually made sense, and we didn't find any obvious deviations from how we would have done it ourselves.</p>
 <p>Some of the things we would have wished to expand on is sentiment analysis and looking at other languages. We think this would have enabled a deeper, more interesting analysis, and would have been a better way to answer the research question we intially looked at.</p>
@@ -14613,7 +14615,7 @@ We also found that using a ready-made library in SKLearn for the TF-IDF gave us 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Options</span>
@@ -15150,7 +15152,7 @@ We also found that using a ready-made library in SKLearn for the TF-IDF gave us 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Explainer:-Tokenizer">Explainer: Tokenizer<a class="anchor-link" href="#Explainer:-Tokenizer">&#182;</a></h1><p>We initially used our own implementation of TF-IDF, but this proved too slow. The</p>
+<h1 id="Explainer:-Tokenizer">Explainer: Tokenizer<a class="anchor-link" href="#Explainer:-Tokenizer">&#182;</a></h1><p>We initially used our own implementation of TF-IDF, but this proved too slow.</p>
 
 </div>
 </div>
@@ -15307,17 +15309,6 @@ We also found that using a ready-made library in SKLearn for the TF-IDF gave us 
 </div>
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15865,22 +15856,6 @@ class="
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
