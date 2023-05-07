@@ -97,7 +97,23 @@
         }
       }
     </style></head><body><nav id=header class="fixed w-full z-10 top-0"><div id=progress class="h-1 z-20 top-0" style="background:linear-gradient(to right,#4dc0b5 var(--scroll),transparent 0)"></div><div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"><div class=pl-4><a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href=https://dribo.github.io/DTU-02467_ProjectB/>The structure of the Cold War on Wikipedia</a></div><div class="block lg:hidden pr-4"><button id=nav-toggle class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none"><svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg></button></div><div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id=nav-content><ul class="list-reset lg:flex justify-end flex-1 items-center list-none px-0"><li><a class="inline-block py-2 px-4 text-gray-900 no-underline" href=../network-analysis>Network</a></li><li><a class="inline-block py-2 px-4 text-gray-900 no-underline" href=../text-analysis>Text Analysis</a></li><li><a class="inline-block py-2 px-4 text-gray-900 no-underline" href=../conclusion>Conclusion</a></li></ul></div></div></nav><div class="container w-full md:max-w-3xl mx-auto pt-20"><div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style=font-family:Georgia,serif><div class=font-sans><h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Text analysis</h1></div><h1 id=text-analysis>Text Analysis</h1><p>The text we have analysed is from the introductory paragraphs of each of the articles. We picked this text because we
-wanted to capture the essence of the article without having to analyse all the available text.</p><blockquote><p>Example of introductory paragraph</p></blockquote><p>Each of these texts then represented one document in our corpus, where the corpus is the entire collection of documents,
+wanted to capture the essence of the article without having to analyse all the available text. Some of these texts are
+longer than others, but in general they all capture the essence of the article.</p><p>Below is an excerpt of the introductory paragraphs from the article about US president Richard Nixon.</p><blockquote><p>Richard Milhous Nixon (January 9, 1913 - April 22, 1994) was the 37th president of the United States, serving from
+1969 to 1974. A member of the Republican Party, he previously served as a representative and senator from California
+and was the 36th vice president from 1953 to 1961 under President Dwight D. Eisenhower. His five years in the
+White House saw reduction of U.S. involvement in the Vietnam War, détente with the Soviet Union and China, the first
+crewed Moon landings, and the establishment of the Environmental Protection Agency and Occupational Safety and
+Health Administration. Nixon&rsquo;s second term ended early, when he became the only president to resign from office, as a
+result of the Watergate scandal. Nixon was born into a poor family of Quakers in a small town in Southern California.
+He graduated from Duke Law School in 1937, practiced law in California, then moved with his wife Pat to Washington in
+1942 to work for the federal government. After active duty in the Naval Reserve during World War II, he was elected to
+the House of Representatives in 1946. His work on the Alger Hiss case established his reputation as a leading
+anti-Communist, which elevated him to national prominence, and in 1950, he was elected to the Senate. Nixon was the
+running mate of Dwight D. Eisenhower, the Republican Party&rsquo;s presidential nominee in the 1952 election, and served for
+eight years as the vice president. He ran for president in 1960, narrowly lost to John F. Kennedy, then failed again
+in a 1962 race for governor of California, after which it was widely believed that his political career was over.
+However, in 1968, he made another run for the presidency and was elected, defeating Hubert Humphrey by less than one
+percentage point in the popular vote, as well as defeating third party candidate George Wallace.</p></blockquote><p>Each of these texts then represented one document in our corpus, where the corpus is the entire collection of documents,
 either from the full data set or from the communities found within the network.</p><h2 id=preprocessing-of-text><em>Preprocessing of text</em></h2><p>The first steps of any text-based task, is to pre-process the text and make it usable for the tasks one wants to use
 the text for. For our approach, we wanted to have the text uniform in terms of capitalisation and to remove punctuation.
 We also needed it to be one long string and not a list of strings.</p><p>Instead of writing our own code for analysing the text, we made use of already written libraries for text analysis from
@@ -112,7 +128,12 @@ as being more significant than words that occur less frequently. On the other ha
 documents, but occur very frequently in these documents, will also be seen as significant to that document.</p><p>Doing this we can get an understanding of which words are most defining for the documents, and also for the individual
 communities that we have found in the network.</p><h2 id=top-terms-the-dataset><em>Top terms the dataset</em></h2><p>When looking at the entire data set, we can use TF-IDF to extract what the top terms for the data set are. As mentioned
 these words will be the ones that are most important and indicative of the theme of the dataset.
-The top 10 terms for the entire dataset are these following 10 terms</p><blockquote><p>Insert top 10 terms here</p></blockquote><p>We see that these top terms all relate to &mldr;</p><h2 id=top-terms-in-communities><em>Top terms in Communities</em></h2><p>Within the communities in the network we have used TF-IDF to extract the top terms of each of these communities. For
+The top 10 terms for the entire dataset are these following 10 terms</p><pre><code>soviet government party war president
+united states state new military
+</code></pre><p>These top terms show us to some degree what this data set is about. We see that the two big players of the Cold War are
+both captured in these top terms, namely the Soviet Union and the United States. This is generally encouraging, as this
+shows that the methods that we have used to capture the important words actually encapsulates what is largely viewed as
+the defining distinctions of participating world powers in the Cold War.</p><h2 id=top-terms-in-communities><em>Top terms in Communities</em></h2><p>Within the communities in the network we have used TF-IDF to extract the top terms of each of these communities. For
 instance community 0, which is a community where the 3 most connected nodes are the articles about U.S. presidents
 <code>Richard Nixon</code>, <code>Dwight Eisenhower</code> and <code>Harry Truman</code>, have the top 10 terms</p><pre><code>kennan, macarthur, eisenhower, gaulle, 
 reagan, bush, reza, hoover, wilson, carter
