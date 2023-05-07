@@ -6,9 +6,27 @@ next: conclusion
 
 # Text Analysis
 The text we have analysed is from the introductory paragraphs of each of the articles. We picked this text because we
-wanted to capture the essence of the article without having to analyse all the available text. 
+wanted to capture the essence of the article without having to analyse all the available text. Some of these texts are
+longer than others, but in general they all capture the essence of the article. 
 
-> Example of introductory paragraph
+Below is an excerpt of the introductory paragraphs from the article about US president Richard Nixon.
+
+> Richard Milhous Nixon (January 9, 1913 - April 22, 1994) was the 37th president of the United States, serving from 
+> 1969 to 1974. A member of the Republican Party, he previously served as a representative and senator from California 
+> and was the 36th vice president from 1953 to 1961 under President Dwight D. Eisenhower. His five years in the 
+> White House saw reduction of U.S. involvement in the Vietnam War, détente with the Soviet Union and China, the first 
+> crewed Moon landings, and the establishment of the Environmental Protection Agency and Occupational Safety and 
+> Health Administration. Nixon's second term ended early, when he became the only president to resign from office, as a 
+> result of the Watergate scandal. Nixon was born into a poor family of Quakers in a small town in Southern California. 
+> He graduated from Duke Law School in 1937, practiced law in California, then moved with his wife Pat to Washington in 
+> 1942 to work for the federal government. After active duty in the Naval Reserve during World War II, he was elected to
+> the House of Representatives in 1946. His work on the Alger Hiss case established his reputation as a leading 
+> anti-Communist, which elevated him to national prominence, and in 1950, he was elected to the Senate. Nixon was the 
+> running mate of Dwight D. Eisenhower, the Republican Party's presidential nominee in the 1952 election, and served for
+> eight years as the vice president. He ran for president in 1960, narrowly lost to John F. Kennedy, then failed again 
+> in a 1962 race for governor of California, after which it was widely believed that his political career was over. 
+> However, in 1968, he made another run for the presidency and was elected, defeating Hubert Humphrey by less than one 
+> percentage point in the popular vote, as well as defeating third party candidate George Wallace.
 
 
 Each of these texts then represented one document in our corpus, where the corpus is the entire collection of documents, 
@@ -47,9 +65,14 @@ communities that we have found in the network.
 When looking at the entire data set, we can use TF-IDF to extract what the top terms for the data set are. As mentioned
 these words will be the ones that are most important and indicative of the theme of the dataset.
 The top 10 terms for the entire dataset are these following 10 terms
-> Insert top 10 terms here
 
-We see that these top terms all relate to ...
+    soviet government party war president
+    united states state new military
+
+These top terms show us to some degree what this data set is about. We see that the two big players of the Cold War are
+both captured in these top terms, namely the Soviet Union and the United States. This is generally encouraging, as this
+shows that the methods that we have used to capture the important words actually encapsulates what is largely viewed as
+the defining distinctions of participating world powers in the Cold War.
 
 ## *Top terms in Communities*
 Within the communities in the network we have used TF-IDF to extract the top terms of each of these communities. For 
