@@ -43,6 +43,28 @@ Using the attributes in our nodes we experimented with subsets. We filtered base
 
 ## Assorativity
 
+
+
 ## Distribution of degrees
 
+The data from wikipedia contains a pages with a very large amount of references, but also pages with few or none. To better understand how this might impact the graph, we plot the distribution of node degrees.
+
+![](/images/degree-distribution-fullgraph.png)
+
+> Degree distribution of full graph
+
+Looking at the degree distributions of the full graph, we see a few outliers with large amounts of edges. The mean degree is 36.5. 
+
+![](/images/degree-distribution.png)
+
+> degree distribution of subgraph with event and degree filter
+
+In the subgraph that we intend to use for community text analysis, we see a much more even distribution, with a mean degree of 9.7. 
+
 ## Modularity and communities
+
+To measure how well the communities are divised, we compute modularity for the three aforementioned graphs. In technical terms, modularity quantifies how interlinked the communities are compared to a graph where edges are randomized. The value is between -0.5, representing complete non-modular clustering, and 1, meaning fully modular partitions within the graph. 
+
+The community detecting algorithm we use is Louvain, which optimizes for modularity. This algorithm first finds clusters locally, then iteratively combining clusters until the next step leads to a decrease in modularity. Trying all possible combinations would get the best result in theory, but this is computationally impractical. Hence, the aforementioned heuristic is used.
+
+For modularity we initially find a value of the entire graph at 0.36. Filtering for event only gives 0.46 which is an improvement. Finally, we find 0.60 after thresholding node degrees. 
