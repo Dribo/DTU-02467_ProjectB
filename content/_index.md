@@ -30,12 +30,19 @@ language used in the articles and the categories were collected to assign a labe
 articles.
 
 This resulted in a data-collection of 859 rows, where each row represents a reference from the Cold War article. In
-total the amount of data summed to be approximately 40 MB of text data. 
+total the amount of data summed to be approximately 40 MB of text data. Each row are described by 7 variables: 
+URL, TITLE, LIST OF REFERENCES, LIST OF PARAGRAPH TEXTS, CATEGORIES, TYPE, TOKENS and UNIQUE TOKENS. Of these, the most
+important ones are the list of references and the list of paragraphs. The list of references is the variable containing
+the articles referenced, and is the one being used to build the network. The list of paragraphs is the first couple of
+paragraphs from the article, and are used to build both the tokens and the unique tokens. These are also added as an 
+attribute in the network, and used to explore the language of the articles.
 
 
-### Sample rows from the data-frame
+### Sample rows from the data-frame? 
 
 
 ## The Network
-The network that has been 
+As mentioned, the network was constructed from the data set by using the list of references that was scraped for each 
+of the articles. This was done by creating a node for each article, and creating an edge for each reference to the 
+referenced article. 
 
