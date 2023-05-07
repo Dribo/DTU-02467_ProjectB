@@ -1,7 +1,7 @@
 ---
 title: Network Description and Analysis
 prev: Wikipedia article interlinkage
-next: network-analysis
+next: text-analysis
 ---
 
 For the research questions of this project, a graph is a suitable representation of the data. It allows us to describe each wikipedia page as a node, and a reference as a link to another node. 
