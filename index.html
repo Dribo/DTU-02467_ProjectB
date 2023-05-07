@@ -117,7 +117,7 @@ CATEGORIES, TYPE, TOKENS, UNIQUE TOKENS
 important ones are the list of references and the list of paragraphs. The list of references is the variable containing
 the articles referenced, and is the one being used to build the network. The list of paragraphs is the first couple of
 paragraphs from the article, and are used to build both the tokens and the unique tokens. These are also added as an
-attribute in the network, and used to explore the language of the articles.</p><h4 id=sample-rows-from-the-data-frame>Sample rows from the data-frame?</h4><h2 id=the-network><em>The Network</em></h2><p>As mentioned, the network was constructed from the data set by using the list of references that was scraped for each
+attribute in the network, and used to explore the language of the articles.</p><h2 id=the-network><em>The Network</em></h2><p>As mentioned, the network was constructed from the data set by using the list of references that was scraped for each
 of the articles. This was done by creating a node for each article, and creating an edge for each reference to the
 referenced article. The resulting full network had in total <code>857</code> nodes and <code>16216</code> edges. To simplify things a bit, we
 decided to make the Network undirected as that allowed us to better detect and understand the communities found in the
