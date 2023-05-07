@@ -1,4 +1,7 @@
 ---
 title: Conclusion
-prev: network-analysis
+prev: text-analysis
 ---
+
+In conclusion,
+

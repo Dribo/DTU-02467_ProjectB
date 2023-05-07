@@ -1,6 +1,6 @@
 ---
 title: Network Description and Analysis
-prev: Wikipedia article interlinkage
+prev: /
 next: text-analysis
 ---
 
