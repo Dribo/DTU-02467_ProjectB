@@ -7,6 +7,9 @@ next: network-analysis
 ##### How are the pages referenced in the Cold War article interlinked with each other?
 *by Magnus A. Nielsen (s204072) & Philip J. F. Helsted (s204147)*
 
+This webpage is accompanied by the following github repository, where data and the code used to perform the anlysis can
+be found. Click [***this***](https://github.com/Dribo/DTU-02467_ProjectA) button to go the repository.
+
 ## Introduction and Motivation
 Wikipedia is an enormous database of knowledge about everything and anything and history is definitely 
 well-documented on Wikipedia. The time period of the Cold War, and the corresponding Wikipedia article, is an 
@@ -18,6 +21,8 @@ the language used that cannot be explained by the difference in topic? This is o
 with this web-page.
 
 ## The Data
+The data is available [***here***](data/wiki_english_with_tokens.csv)
+
 The data that have been used for this project, was obtained by web-scraping some articles on Wikipedia. The first 
 article that was scraped, and therefore used as a starting point, was the article about the Cold War. 
 From there all references to other Wikipedia articles present in the body-text were collected and each of these were
