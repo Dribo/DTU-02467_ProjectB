@@ -14,7 +14,7 @@ wanted to capture the essence of the article without having to analyse all the a
 Each of these texts then represented one document in our corpus, where the corpus is the entire collection of documents, 
 either from the full data set or from the communities found within the network. 
 
-## Preprocessing of text
+## *Preprocessing of text*
 The first steps of any text-based task, is to pre-process the text and make it usable for the tasks one wants to use
 the text for. For our approach, we wanted to have the text uniform in terms of capitalisation and to remove punctuation.
 We also needed it to be one long string and not a list of strings. 
@@ -26,7 +26,7 @@ analysis than writing functioning code. The SKlearn functions combines the pre-p
 that all letters are de-capitalised and the tokenization, where the texts are reduced to the individual terms which
 appear in the text.
 
-## TF-IDF
+## *TF-IDF*
 The method we used for understanding the text was TF-IDF vectorisation. TF-IDF is a method that uses two parts: 
 > TF stands for Term Frequency and represents how often a term occurs in one document. 
 
@@ -43,10 +43,18 @@ documents, but occur very frequently in these documents, will also be seen as si
 Doing this we can get an understanding of which words are most defining for the documents, and also for the individual
 communities that we have found in the network.
 
-## Top terms in Communities
+## *Top terms in Communities*
 Within the communities in the network we have used TF-IDF to extract the top terms of each of these communities. For 
 instance community 0, which is a community where the 3 most connected nodes are the articles about U.S. presidents
 `Richard Nixon`, `Dwight Eisenhower` and `Harry Truman`, have the top 10 terms
-['kennan', 'macarthur', 'eisenhower', 'gaulle', 'reagan', 'bush', 'reza', 'hoover', 'wilson', 'carter']
 
-> Insert image of top terms from some communities
+    kennan, macarthur, eisenhower, gaulle, 
+    reagan, bush, reza, hoover, wilson, carter
+
+All of these terms are names of presidents or leaders, which tell us something about what the community is about. In the
+case of community 0, the top terms reinforce the fact that this community has encapsulated the presidents of the western
+world, especially the presidents of the US. Another observation to be made is that the term `gaulle` has been captured,
+which references the French general and president `Charles le Gaulle`, which indicates that he is significant for these
+articles, and by extension that he had some relevance to the people the articles are about.
+
+## 
