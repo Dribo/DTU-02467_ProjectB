@@ -1,6 +1,6 @@
 ---
-title: Motivation
-prev: 
+title: Motivation and Introduction
+layout: single 
 next: Data description
 ---
 
@@ -20,18 +20,22 @@ the language used that cannot be explained by the difference in topic? These are
 to answer with this webpage.
 
 ## The Data
-The data that have been used for this project, was obtained by web-scraping some articles on Wikipedia. THe first that
-was scraped, and therefore used as a starting point, was the article about the Cold War. From there all references to 
-other Wikipedia articles present in the body-text were collected and each of these were in-turn scraped for references.
-This resulted in a collection of articles all of which were referenced on the Cold War, and for each of these we had the
-articles they themselves referenced. Apart from the references, we also collected the first few paragraphs of text, and
-the categories of the articles. The text was collected as a way to explore the language used in the articles
-and the categories were collected to assign a label of person or event to each of the articles.
+The data that have been used for this project, was obtained by web-scraping some articles on Wikipedia. The first 
+article that was scraped, and therefore used as a starting point, was the article about the Cold War. 
+From there all references to other Wikipedia articles present in the body-text were collected and each of these were
+in-turn scraped for references. This resulted in a collection of articles all of which were referenced on the Cold War, 
+and for each of these we had the articles they themselves referenced. Apart from the references, we also collected the 
+first few paragraphs of text, and the categories of the articles. The text was collected as a way to explore the 
+language used in the articles and the categories were collected to assign a label of person or event to each of the 
+articles.
+
+This resulted in a data-collection of 859 rows, where each row represents a reference from the Cold War article. In
+total the amount of data summed to be approximately 40 MB of text data. 
 
 
+### Sample rows from the data-frame
 
 
-## Something about graphs
-On wikipedia, articles contain references to other articles whenever a subject has a Wikipedia article written about it.
-This means that Wikipedia is interlinked through articles that reference each other, and can therefore be modelled as a 
-network graph where edges are the 
+## The Network
+The network that has been 
+
