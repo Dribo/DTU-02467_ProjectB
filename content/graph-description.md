@@ -20,7 +20,8 @@ The data we have collected for each page is added as attributes to the nodes in 
 
 > Figure showing each attributes and how we obtain the value
 
-
+## Directed vs Undirected
+We ultimately look into an undirected graph.
 
 Nam commodo lorem quis tortor euismod, ut ultrices orci aliquet. Sed eget dui nec sem ullamcorper convallis id nec ante. Aliquam ultricies a massa quis semper. Donec suscipit augue ut sagittis hendrerit. Aliquam erat volutpat. Proin aliquet maximus nibh, id aliquet justo maximus at. Sed accumsan ante id aliquam pellentesque. 
 
