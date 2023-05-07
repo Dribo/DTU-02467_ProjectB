@@ -1,5 +1,5 @@
 ---
-title: Graph Description
+title: Graph Description and Analysis
 prev: "/"
 next: network-analysis
 ---
